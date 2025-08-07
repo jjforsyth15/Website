@@ -1,0 +1,66 @@
+.my-links-title {
+    margin-top: 4em;
+    text-align: center;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-title {
+    color: #fff;
+    text-align: center;
+}
+
+.link {
+    color: #fff;
+    font-size: 1.25em;
+    margin: 2em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5em;
+    background: linear-gradient(to right, #2745b0, #408afb);
+    border: 0;
+    padding: 10px 40px;
+    
+    font-family: sans-serif;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: var(--delay, 0.25s);
+    animation-fill-mode: forwards;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.link:hover {
+    background: linear-gradient(to left, #2745b0, #408afb);
+    transform: scale(1.3);
+    box-shadow: 0 0 12px rgba(64, 138, 251, 0.5);
+}
+
+.link:active {
+    transform: scale(0.98);
+}
+
+.links-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}

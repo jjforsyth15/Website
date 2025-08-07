@@ -1,0 +1,125 @@
+// Menu
+.menu-div {
+    background: linear-gradient(to left, #2745b0, #5997f5);
+    position: fixed;
+    height: 10em;
+    width: 100%;
+    top: -8em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    padding-bottom: 2em;
+
+     transition: top 10 ease;
+    -webkit-transition: top 1s;
+}
+.menu-div:hover {
+    top: 0em;
+    background: linear-gradient(to right, #2745b0, #5997f5);
+}
+
+.menu-tag {
+    color: #fff;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.menu-list {
+    padding: 0.5em;
+    list-style: none;
+    font-size: 1.15em;
+}
+
+.list-item {
+    cursor: pointer;
+}
+
+.home-container {
+    margin: 4em;
+    font-family: sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-title {
+    color: #fff;
+    background: linear-gradient(to right, #2745b0, #408afb);
+    text-align: center;
+    text-shadow: 0 0 8px rgba(64, 138, 251, 0.6);
+}
+.home-subtitle {
+    color: #fff;
+    text-align: center;
+}
+.about-me-title {
+    color: #fff;
+    text-align: center;
+}
+.about-me-content {
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+/* Rain fall background */
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 91deg;
+}
+
+$drops: 500;
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #0e283f, #5f768a);
+    overflow: hidden;
+}
+
+.rain {
+    width: 120vw;
+    height: 100vh;
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    z-index: -1;
+}
+
+.drop {
+    border: 0.25vmin solid transparent;
+    border-bottom-color: #abc2e9;
+    position: absolute;
+    top: -5vmin;
+    --angle: 91deg;
+}
+
+@for $i from 1 through $drops {
+    .drop:nth-child(#{$i}) {
+        opacity: random(90) * 0.1;
+        left: random(1200) * 0.1vw;
+        border-left-width: random(80) * 0.1vmin;
+        animation: fall-#{$i} 
+            (random(15) * 0.15s)
+            (random(25) * -0.5s)
+            ease-in
+            infinite;
+
+        @keyframes fall-#{$i} {
+            #{percentage( random(50) / 500)} {
+                transform: rotate(var(--angle)) translateX(0);
+            }
+            to {
+                transform: rotate(var(--angle)) translateX(calc(100vh + 5vmin));
+            }
+        }
+    }
+}
+
+
+// Personal Projects Page
+
