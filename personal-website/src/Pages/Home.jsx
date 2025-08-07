@@ -61,6 +61,17 @@ function Home() {
                     <div className='resume-container'>
                         <title>JF | Resume</title>
 
+                        <h1 className="my-links-title">My Resume</h1>
+
+                        <div className='resume-div'>
+                            <iframe
+                                src="/Joseph Forsyth Resume 8_25.pdf"
+                                width="100%"
+                                height="700em"
+                                style={{border: "none" }}
+                                title="Resume"
+                            ></iframe>
+                        </div>
                     </div>
                 )}
 
