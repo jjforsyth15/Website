@@ -1,7 +1,7 @@
 import { Link, useNavigate, Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import styles from "./MainLayout.module.css";
+import styles from "../styles/MainLayout.module.css";
 
 
 
@@ -11,7 +11,7 @@ function MainLayout() {
     return (
         <div className={styles.layout}>
             <Header />
-            
+
             <main className={styles.main}>
                 <Outlet />
             </main>

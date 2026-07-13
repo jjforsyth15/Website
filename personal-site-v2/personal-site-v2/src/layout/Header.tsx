@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "../styles/Header.module.css";
 
 export default function Header() {
@@ -10,10 +10,41 @@ export default function Header() {
                 </Link>
 
                 <nav className={styles.nav}>
-                    <Link to="/about">About</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/resume">Resume</Link>
-                    <Link to="/contact">Contact</Link>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            isActive ? styles.active : styles.link
+                        }
+                    >
+                        About
+                    </NavLink>
+
+                    <NavLink
+                        to="/projects"
+                        className={({ isActive }) =>
+                            isActive ? styles.active : styles.link
+                        }
+                    >
+                        Projects
+                    </NavLink>
+
+                    <NavLink
+                        to="/resume"
+                        className={({ isActive }) =>
+                            isActive ? styles.active : styles.link
+                        }
+                    >
+                        Resume
+                    </NavLink>
+                    
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) =>
+                            isActive ? styles.active : styles.link
+                        }
+                    >
+                        Contact
+                    </NavLink>
                 </nav>
             </div>
         </header>

@@ -1,14 +1,19 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background: white;
+    z-index: 1000;
+
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+
     border-bottom: 1px solid #e5e7eb;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+
     padding: 1rem 2rem;
 
     display: flex;
@@ -17,24 +22,35 @@
 }
 
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
+
     color: #111827;
     text-decoration: none;
 }
 
 .nav {
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
-.nav a {
+.link,
+.active {
     text-decoration: none;
-    color: #374151;
     font-weight: 500;
+
     transition: color 0.2s ease;
 }
 
-.nav a:hover {
+.link {
+    color: #6b7280;
+}
+
+.link:hover {
+    color: #2563eb;
+}
+
+.active {
     color: #2563eb;
 }

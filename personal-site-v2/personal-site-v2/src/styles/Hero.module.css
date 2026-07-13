@@ -1,0 +1,142 @@
+.hero {
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    background: #fafafa;
+}
+
+.container {
+    width: min(100%, 68.75rem);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 1.25rem;
+    color: #2563eb;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.title {
+    max-width: 56.25rem;
+    margin: 0;
+    color: #111827;
+    font-size: clamp(3rem, 7vw, 5.75rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.description {
+    max-width: 42.5rem;
+    margin-top: 2rem;
+    color: #5f6877;
+    font-size: 1.2rem;
+    line-height: 1.75;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 3.25rem;
+    padding: 0.9rem 1.5rem;
+
+    border-radius: 999rem;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primaryButton {
+    background: #111827;
+    color: #ffffff;
+    border: 0.0625rem solid #111827;
+    box-shadow: 0 0.625rem 1.875rem rgba(17, 24, 39, 0.14);
+}
+
+.primaryButton:hover {
+    transform: translateY(-0.125rem);
+    background: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 0.875rem 2.1875rem rgba(37, 99, 235, 0.2);
+}
+
+.secondaryButton {
+    background: transparent;
+    color: #111827;
+    border: 0.0625rem solid #d1d5db;
+}
+
+.secondaryButton:hover {
+    transform: translateY(-0.125rem);
+    border-color: #111827;
+    background: #ffffff;
+}
+
+.current {
+    margin-top: 2rem;
+    color: #7b8492;
+    font-size: 0.95rem;
+}
+
+.current strong {
+    color: #111827;
+    font-weight: 600;
+}
+
+@media (max-width: 48rem) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 1.5rem;
+    }
+
+    .title {
+        font-size: clamp(2.75rem, 13vw, 4.25rem);
+        line-height: 1.02;
+    }
+
+    .description {
+        margin-top: 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 30rem) {
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .eyebrow {
+        font-size: 0.78rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+    }
+}
