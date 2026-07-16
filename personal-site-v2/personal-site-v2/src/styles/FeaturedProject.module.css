@@ -114,7 +114,10 @@
 }
 
 .browserWindow {
+    margin: 0 auto;
     width: 100%;
+    max-width: 50rem;
+    max-height: 40rem;
     overflow: hidden;
 
     border: 0.0625rem solid #dfe3e8;

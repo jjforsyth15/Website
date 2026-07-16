@@ -6,6 +6,8 @@ export default function Hero() {
         <section className={styles.hero}>
             <div className={styles.container}>
 
+                <h1>Joseph Forsyth</h1>
+
                 <p className={styles.eyebrow}>
                     Full-stack Software Engineer
                 </p>
